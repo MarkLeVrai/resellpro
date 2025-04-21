@@ -8,6 +8,9 @@ workflows:
         XCODE_WORKSPACE: "ResellPro.xcworkspace"
         XCODE_SCHEME: "ResellPro"
     scripts:
+      - name: Add CocoaPods repo
+        script: |
+          pod repo add gonativeio-gonative-specs https://github.com/gonativeio/gonative-specs.git
       - name: Install CocoaPods dependencies
         script: |
           pod install
